@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('halaman_depan.root');
 });
+
+Route::get('/sesi', [AuthController::class, 'login']);
+Route::get('/sesireg', [AuthController::class, 'register']);
