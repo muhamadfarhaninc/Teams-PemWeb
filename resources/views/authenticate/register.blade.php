@@ -34,7 +34,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form class="login100-form validate-form" method="POST">
+                <form class="login100-form validate-form" method="POST" action="" enctype="multipart/form-data">
                     <span class="login100-form-title p-b-43">
                         Register to In Website
                     </span>
@@ -54,27 +54,16 @@
 
 
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
-                        <input class="input100 pass" type="password" name="pass">
+                        <input class="input100 pass" type="password" name="password">
                         <span class="focus-input100"></span>
                         <span class="label-input100">Password</span>
                     </div>
-
-                    <div class="flex-sb-m w-full p-t-3 p-b-32">
-                        <div class="contact100-form-checkbox">
-                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                            <label class="label-checkbox100" for="ckb1">
-                                Remember me
-                            </label>
-                        </div>
-
-                        <div>
-                            <a href="#" class="txt1">
-                                Forgot Password?
-                            </a>
-                        </div>
+                    <div style="margin: 20px; margin-bottom: 40px;">
+                        <label for="gambar"
+                            style="margin-bottom: 10px; font-size: 16pt; color: #666666;">gambar</label>
+                        <input class="input100 " type="file" name="gambar" id="gambar"
+                            style="margin-left: -43px;">
                     </div>
-
-
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
                             Register
