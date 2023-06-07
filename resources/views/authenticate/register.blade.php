@@ -34,14 +34,15 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100">
-                <form class="login100-form validate-form" method="POST" action="" enctype="multipart/form-data">
+                <form class="login100-form validate-form" method="POST" action="/store" enctype="multipart/form-data">
+                    @csrf
                     <span class="login100-form-title p-b-43">
                         Register to In Website
                     </span>
 
 
                     <div class="wrap-input100 validate-input" data-validate="Valid email is required: asd">
-                        <input class="input100" type="text" name="text">
+                        <input class="input100" type="text" name="fullname">
                         <span class="focus-input100"></span>
                         <span class="label-input100">Full Name</span>
                     </div>
@@ -62,7 +63,7 @@
                         <label for="gambar"
                             style="margin-bottom: 10px; font-size: 16pt; color: #666666;">gambar</label>
                         <input class="input100 " type="file" name="gambar" id="gambar"
-                            style="margin-left: -43px;">
+                            style="margin-left: -40px;">
                     </div>
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">

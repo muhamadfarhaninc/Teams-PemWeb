@@ -18,17 +18,20 @@ class DummyUsersSeeder extends Seeder
                 'name' => 'Muhamad Farhan',
                 'email' => 'muhamadfarhan.inc@gmail.com',
                 'role' => 'admin',
-                'password' => bcrypt('123456')
+                'password' => bcrypt('123456'),
+                'gambar' => 'example.jpg',
             ],
             [
                 'name' => 'Eko Kurniawan Khannedy',
                 'email' => 'kurniawankhannedy.inc@gmail.com',
-                'password' => bcrypt('123456')
+                'password' => bcrypt('123456'),
+                'gambar' => '',
             ],
             [
                 'name' => 'Sandhika Galih',
                 'email' => 'wpuunpas.inc@gmail.com',
-                'password' => bcrypt('123456')
+                'password' => bcrypt('123456'),
+                'gambar' => '',
             ],
         ];
 

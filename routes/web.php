@@ -25,6 +25,7 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/sesi', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'loginreq']);
     Route::get('/sesireg', [AuthController::class, 'register']);
+    Route::post('/store', [AuthController::class, 'registerreq']);
 });
 
 Route::middleware(['auth'])->group(function () {

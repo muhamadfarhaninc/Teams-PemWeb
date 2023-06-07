@@ -49,6 +49,16 @@
                             </ul>
                         </div>
                     @endif
+                    @if (Session::get('success'))
+                        <div class="alert alert-success alert-dismissible fade show">
+                            <ul>
+                                <li>
+                                    {{ Session::get('success') }}
+
+                                </li>
+                            </ul>
+                        </div>
+                    @endif
                     <div class="wrap-input100 validate-input">
                         <input class="input100" type="text" name="email" value="{{ old('email') }}">
                         <span class="focus-input100"></span>
