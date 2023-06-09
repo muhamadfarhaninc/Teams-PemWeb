@@ -21,34 +21,14 @@
 
 <body>
     <div class="container-scroller">
-        <div class="row p-0 m-0 proBanner" id="proBanner">
-            <div class="col-md-12 p-0 m-0">
-                <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
-                    <div class="ps-lg-1">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="mb-0 font-weight-medium me-3 buy-now-text">Free 24/7 customer support, updates,
-                                and more with this template!</p>
-                            <a href="https://www.bootstrapdash.com/product/royalui/?utm_source=organic&utm_medium=banner&utm_campaign=buynow_demo"
-                                target="_blank" class="btn me-2 buy-now-btn border-0">Get Pro</a>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-between">
-                        <a href="https://www.bootstrapdash.com/product/royalui/"><i
-                                class="ti-home me-3 text-white"></i></a>
-                        <button id="bannerClose" class="btn border-0 p-0">
-                            <i class="ti-close text-white me-0"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo me-5" href="index.html"><img
-                        src="{{ asset('dashboard/images/logo.svg') }}" class="me-2" alt="logo" /></a>
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img
-                        src="{{ asset('dashboard/images/logo-mini.svg') }}" alt="logo" /></a>
+                <a class="navbar-brand brand-logo me-5" href="" style="width: 50px; margin-left: -100px;"><img
+                        src="{{ asset('dashboard/images/logo.png') }}" class="me-2" alt="logo" /><b
+                        style="font-size: 16pt;">Kelompok8</b></a>
+                <a class="navbar-brand brand-logo-mini" href=""><img
+                        src="{{ asset('dashboard/images/logo.png') }}" alt="logo" /></a>
             </div>
             <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
                 <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -78,7 +58,8 @@
                             <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
                             <a class="dropdown-item">
                                 <div class="item-thumbnail">
-                                    <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
+                                    <img src="{{ asset('dashboard/images/faces/face4.jpg') }}" alt="image"
+                                        class="profile-pic">
                                 </div>
                                 <div class="item-content flex-grow">
                                     <h6 class="ellipsis font-weight-normal">David Grey
@@ -212,40 +193,37 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                            aria-controls="ui-basic">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false"
+                            aria-controls="tables">
                             <i class="ti-view-list-alt menu-icon"></i>
                             <span class="menu-title">Tables</span>
                             <i class="menu-arrow"></i>
                         </a>
-                        <div class="collapse" id="ui-basic">
+                        <div class="collapse" id="tables">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" href="/datakad3">Data
                                         KAD3</a></li>
-                                <li class="nav-item"> <a class="nav-link"
-                                        href="pages/ui-features/typography.html">Typography</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false"
-                            aria-controls="auth">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#userpg" aria-expanded="false"
+                            aria-controls="userpg">
                             <i class="ti-user menu-icon"></i>
                             <span class="menu-title">User Pages</span>
                             <i class="menu-arrow"></i>
                         </a>
-                        <div class="collapse" id="auth">
+                        <div class="collapse" id="userpg">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html">Feature
-                                        1</a>
+                                <li class="nav-item"> <a class="nav-link" href="{{ url('/mastercontrol') }}">Control
+                                        Akun
+                                        User</a>
                                 </li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html">Feature 2
-                                    </a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="documentation/documentation.html">
+                        <a class="nav-link" href="{{ url('/doc') }}">
                             <i class="ti-write menu-icon"></i>
                             <span class="menu-title">Documentation</span>
                         </a>
@@ -253,57 +231,19 @@
                 </ul>
             </nav>
             <!-- partial -->
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    <div class="row">
-                        <div class="col-md-12 grid-margin">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div>
-                                    <h4 class="font-weight-bold mb-0">Dashboard</h4>
-                                </div>
-                                <div>
-                                    <button type="button" class="btn btn-primary btn-icon-text btn-rounded">
-                                        <i class="ti-clipboard btn-icon-prepend"></i>Report
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <p class="card-title text-md-center text-xl-left">{{ Auth::user()->name }}</p>
-                                    <div
-                                        class="d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
-                                        <i class="ti-user icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
-                                        <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0 text-success">
-                                            {{ Auth::user()->role }}</h3>
-                                    </div>
-                                    <p class="mb-0 mt-2 text-warning">mahasiswa <span
-                                            class="text-black ms-1"><small>(22010001)</small></span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                    if(Auth::user()->role === 'admin'){
-                    ?>
+
                     @yield('fiture')
-                    <?php 
-                    }
-                    ?>
                 </div>
                 <!-- content-wrapper ends -->
                 <!-- partial:partials/_footer.html -->
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
-                                href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com
-                            </a>2021</span>
+                                href="https://github.com/muhamadfarhaninc/teams-pemweb" target="_blank">kelompok8
+                            </a>2023</span>
                         <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a
-                                href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard </a>
-                            templates</span>
+                                href="" target="_blank"> Project UAS </a>
+                            website</span>
                     </div>
                 </footer>
                 <!-- partial -->

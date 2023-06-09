@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('todos', function (Blueprint $table) {
+        Schema::create('data_kad3', function (Blueprint $table) {
             $table->id();
-            $table->string('list');
-            $table->string('status')->default('');
+            $table->string('gambar');
+            $table->string('nama');
+            $table->integer('nim')->unique();
+            $table->string('alamat');
+            $table->integer('telepon')->unique();
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('todos');
+        Schema::dropIfExists('data_kad3');
     }
 };
