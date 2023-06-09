@@ -8,6 +8,7 @@
     <title>Website Data Komputerasi Akutansi D3</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Favicons -->
     <link href="{{ asset('vesperr-2/assets/img/favicon.png') }}" rel="icon">
