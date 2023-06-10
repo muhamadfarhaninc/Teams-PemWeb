@@ -187,9 +187,13 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="">
-                            <i class="ti-shield menu-icon"></i>
-                            <span class="menu-title">Dashboard</span>
+                        @if (Auth::user()->role === 'admin')
+                            <a class="nav-link" href="{{ url('/admin') }}">
+                            @else
+                                <a class="nav-link" href="{{ url('/user') }}">
+                        @endif
+                        <i class="ti-shield menu-icon"></i>
+                        <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -206,24 +210,27 @@
                             </ul>
                         </div>
                     </li>
+                    @if (Auth::user()->role === 'admin')
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="collapse" href="#userpg" aria-expanded="false"
+                                aria-controls="userpg">
+                                <i class="ti-user menu-icon"></i>
+                                <span class="menu-title">User Pages</span>
+                                <i class="menu-arrow"></i>
+                            </a>
+                            <div class="collapse" id="userpg">
+                                <ul class="nav flex-column sub-menu">
+                                    <li class="nav-item"> <a class="nav-link"
+                                            href="{{ url('/mastercontrol') }}">Control
+                                            Akun
+                                            User</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    @endif
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#userpg" aria-expanded="false"
-                            aria-controls="userpg">
-                            <i class="ti-user menu-icon"></i>
-                            <span class="menu-title">User Pages</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="userpg">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="{{ url('/mastercontrol') }}">Control
-                                        Akun
-                                        User</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/doc') }}">
+                        <a class="nav-link" href="https://github.com/muhamadfarhaninc/Teams-PemWeb" target="_blank">
                             <i class="ti-write menu-icon"></i>
                             <span class="menu-title">Documentation</span>
                         </a>
@@ -231,26 +238,24 @@
                 </ul>
             </nav>
             <!-- partial -->
-
-                    @yield('fiture')
+            @yield('fiture')
+            <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+            <footer class="footer">
+                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
+                            href="https://github.com/muhamadfarhaninc/teams-pemweb" target="_blank">kelompok8
+                        </a>2023</span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a
+                            href="" target="_blank"> Project UAS </a>
+                        website</span>
                 </div>
-                <!-- content-wrapper ends -->
-                <!-- partial:partials/_footer.html -->
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
-                                href="https://github.com/muhamadfarhaninc/teams-pemweb" target="_blank">kelompok8
-                            </a>2023</span>
-                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a
-                                href="" target="_blank"> Project UAS </a>
-                            website</span>
-                    </div>
-                </footer>
-                <!-- partial -->
-            </div>
-            <!-- main-panel ends -->
+            </footer>
+            <!-- partial -->
         </div>
-        <!-- page-body-wrapper ends -->
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
 

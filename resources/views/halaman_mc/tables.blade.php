@@ -6,13 +6,13 @@
                 <div class="col-md-12 grid-margin">
                     <div class="d-flex justify-content-between align-items-center">
                         <div>
-                            <h4 class="font-weight-bold mb-0">Data Komputerasi Akutansi D3</h4>
+                            <h4 class="font-weight-bold mb-0">Data User</h4>
                         </div>
                         <div>
-                            <a href="/tambahkad" class="text-decoration-none text-white"><button type="button"
+                            <a href="/tambahmc" class="text-decoration-none text-white"><button type="button"
                                     class="btn btn-primary btn-icon-text btn-rounded">
                                     <i class="ti-plus btn-icon-prepend"></i>Tambah
-                                    Data
+                                    User
                                 </button></a>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">KAD3 TABLE</h4>
+                        <h4 class="card-title">ACCOUNT TABLE</h4>
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
@@ -52,13 +52,7 @@
                                             Nama lengkap
                                         </th>
                                         <th>
-                                            Nim
-                                        </th>
-                                        <th>
-                                            Alamat
-                                        </th>
-                                        <th>
-                                            Telepon
+                                            Role
                                         </th>
                                         <th>
                                             Email
@@ -68,25 +62,34 @@
                                         </th>
                                     </tr>
                                 </thead>
-                                @foreach ($datakad3 as $item)
+                                @foreach ($mc as $item)
                                     <tbody>
                                         <td class="py-1">
                                             <img src="{{ asset('gambar') }}/{{ $item->gambar }}" alt="image" />
                                         </td>
-                                        <td>{{ $item->nama }}</td>
-                                        <td>{{ $item->nim }}</td>
-                                        <td>{{ $item->alamat }}</td>
-                                        <td>{{ $item->telepon }}</td>
+                                        <td>
+                                            {{ $item->name }}
+                                        </td>
+                                        @if ($item->role === 'admin')
+                                            <td style="color:gold; font-weight: bold;">
+                                                {{ $item->role }}</td>
+                                        @else
+                                            <td>{{ $item->role }}</td>
+                                        @endif
                                         <td>{{ $item->email }}</td>
-                                        <td><a href="#"
-                                                class="btn-sm btn-secondary text-decoration-none">Det</a>&nbsp;<a
-                                                href="/kadedit/{{ $item->id }}"
-                                                class="btn-sm btn-warning text-decoration-none">Edit</a>
-                                            <form onsubmit="return confirm('Yakin Hapus Data ?')" class="d-inline"
-                                                action="/kadhapus/{{ $item->id }}" method="POST">
-                                                @csrf
-                                                <input type="submit" class="btn-sm btn-danger btn-sm" value="Del">
-                                            </form>
+                                        @if ($item->role === 'admin')
+                                            <td style="color:gold; font-weight: bold;">Admin User</td>
+                                        @else
+                                            <td><a href="#"
+                                                    class="btn-sm btn-secondary text-decoration-none">Det</a>&nbsp;<a
+                                                    href="/mcedit/{{ $item->id }}"
+                                                    class="btn-sm btn-warning text-decoration-none">Edit</a>
+                                                <form onsubmit="return confirm('Yakin Hapus Data ?')" class="d-inline"
+                                                    action="/mchapus/{{ $item->id }}" method="POST">
+                                                    @csrf
+                                                    <input type="submit" class="btn-sm btn-danger btn-sm" value="Del">
+                                                </form>
+                                        @endif
                                         </td>
                                     </tbody>
                                 @endforeach

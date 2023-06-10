@@ -9,4 +9,13 @@ class DataKad3 extends Model
 {
     use HasFactory;
     protected $table = 'data_kad3';
+    protected $fillable = [
+        'id',
+        'gambar',
+        'nama',
+        'nim',
+        'alamat',
+        'email',
+        'telepon',
+    ];
 }
