@@ -71,18 +71,25 @@
                                             {{ $item->name }}
                                         </td>
                                         @if ($item->role === 'admin')
-                                            <td style="color:gold; font-weight: bold;">
+                                            <td style="color:rgb(0, 255, 0); font-weight: bold;">
                                                 {{ $item->role }}</td>
                                         @else
                                             <td>{{ $item->role }}</td>
                                         @endif
                                         <td>{{ $item->email }}</td>
                                         @if ($item->role === 'admin')
-                                            <td style="color:gold; font-weight: bold;">Admin User</td>
+                                            <td style="color:rgb(0, 255, 0); font-weight: bold;">Admin User</td>
                                         @else
-                                            <td><a href="#"
-                                                    class="btn-sm btn-secondary text-decoration-none">Det</a>&nbsp;<a
-                                                    href="/mcedit/{{ $item->id }}"
+                                            <td>
+                                                <form
+                                                    onsubmit="return confirm('Yakin ingin Mengangkat USER Menjadi ADMIN ?')"
+                                                    class="d-inline" action="/uprole/{{ $item->id }}" method="POST">
+                                                    @csrf
+                                                    <input type="submit"
+                                                        class="btn-sm text-decoration-none border border-warning text-warning"
+                                                        value="UP">
+                                                </form>
+                                                &nbsp;<a href="/mcedit/{{ $item->id }}"
                                                     class="btn-sm btn-warning text-decoration-none">Edit</a>
                                                 <form onsubmit="return confirm('Yakin Hapus Data ?')" class="d-inline"
                                                     action="/mchapus/{{ $item->id }}" method="POST">

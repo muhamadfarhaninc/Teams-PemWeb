@@ -49,16 +49,20 @@ class AuthController extends Controller
     {
         $request->validate(
             [
-                'fullname' => 'required',
+                'fullname' => 'required|min:5',
                 'email' => 'required',
-                'password' => 'required',
-                'gambar' => 'required',
+                'password' => 'required|min:6',
+                'gambar' => 'required|file|image',
             ],
             [
-                'fullname.required' => 'Name wajib diisi',
-                'email.required' => 'Email wajib diisi',
-                'password.required' => 'Password wajib diisi',
-                'gambar.required' => 'Pilih File',
+                'fullname.required' => 'Full Name wajib diisi.',
+                'fullname.min' => 'Full Name minimal 5 karakter.',
+                'email.required' => 'Email wajib diisi.',
+                'password.required' => 'Password wajib diisi.',
+                'password.min' => 'Password minimal 6 karakter.',
+                'gambar.required' => 'Gambar wajib diupload.',
+                'gambar.file' => 'Gambar ini Invalid, Coba cari yang lain.',
+                'gambar.image' => 'File yang di upload Wajib Image.',
             ],
         );
 

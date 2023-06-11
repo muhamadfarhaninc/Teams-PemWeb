@@ -40,9 +40,29 @@
                     <span class="login100-form-title p-b-43">
                         Register to In Website
                     </span>
+                    <div>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $item)
+                                        <li>{{ $item }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        @if (Session::get('success'))
+                            <div class="alert alert-success alert-dismissible fade show">
+                                <ul>
+                                    <li>
+                                        {{ Session::get('success') }}
 
+                                    </li>
+                                </ul>
+                            </div>
+                        @endif
+                    </div>
 
-                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: asd">
+                    <div class="wrap-input100 validate-input" data-validate="Valid name is required: kevin">
                         <input class="input100" type="text" name="fullname">
                         <span class="focus-input100"></span>
                         <span class="label-input100">Full Name</span>

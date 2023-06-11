@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Datakad3Controller;
 use App\Http\Controllers\McController;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\UproleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,6 +47,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/tambahmcreq', [McController::class, 'tambahReq']);
     Route::post('/editmcreq', [McController::class, 'editReq']);
     Route::post('/mchapus/{id}', [McController::class, 'hapus']);
+
+    Route::post('/uprole/{id}', [UproleController::class, 'index']);
 });
 
 Route::middleware(['IsTamu'])->group(

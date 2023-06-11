@@ -89,22 +89,22 @@ class Datakad3Controller extends Controller
             'email.email' => 'Format Email Invalid',
         ]);
 
-        $gambar_file = $request->file('gambar');
-        $foto_ekstensi = $gambar_file->extension();
-        $nama_foto = date('ymdhis') . "." . $foto_ekstensi;
-        $gambar_file->move(public_path('gambar'), $nama_foto);
-        $model = DataKad3::find($request->id);
-        unset($model->gambar);
-        $model->save();
+        $dataKad3 = DataKad3::find($request->id);
 
-        DataKad3::where('id', $request->id)->update([
-            'gambar' => $nama_foto,
-            'nama' => $request->nama,
-            'nim' => $request->nim,
-            'alamat' => $request->alamat,
-            'telepon' => $request->telepon,
-            'email' => $request->email,
-        ]);
+        if ($request->hasFile('gambar')) {
+            $gambar_file = $request->file('gambar');
+            $foto_ekstensi = $gambar_file->extension();
+            $nama_foto = date('ymdhis') . "." . $foto_ekstensi;
+            $gambar_file->move(public_path('gambar'), $nama_foto);
+            $dataKad3->gambar = $nama_foto;
+        }
+
+        $dataKad3->nama = $request->nama;
+        $dataKad3->nim = $request->nim;
+        $dataKad3->alamat = $request->alamat;
+        $dataKad3->telepon = $request->telepon;
+        $dataKad3->email = $request->email;
+        $dataKad3->save();
 
         return redirect('/datakad3')->with('success', 'Berhasil Mengubah Data');
     }
