@@ -69,7 +69,5 @@ Route::middleware(['IsLogin'])->group(
         Route::get('/mastercontrol', [McController::class, 'index']);
         Route::get('/tambahmc', [McController::class, 'tambah']);
         Route::get('/mcedit/{id}', [McController::class, 'edit']);
-
-        Route::get('/global', [ChatController::class, 'index']);
     }
 );

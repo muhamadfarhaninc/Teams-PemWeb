@@ -213,19 +213,6 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#chat" aria-expanded="false"
-                            aria-controls="chat">
-                            <i class="ti-comment-alt menu-icon"></i>
-                            <span class="menu-title">Chat</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="chat">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="/global">Global</a></li>
-                            </ul>
-                        </div>
-                    </li>
                     @if (Auth::user()->role === 'admin')
                         <li class="nav-item">
                             <a class="nav-link" data-bs-toggle="collapse" href="#userpg" aria-expanded="false"
@@ -258,41 +245,42 @@
                 <div class="content-wrapper">
                     @yield('fiture')
                     <!-- content-wrapper ends -->
-                    <!-- partial:partials/_footer.html -->
-                    <footer class="footer">
-                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
-                                    href="https://github.com/muhamadfarhaninc/teams-pemweb" target="_blank">kelompok8
-                                </a>2023</span>
-                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a
-                                    href="" target="_blank"> Project UAS </a>
-                                website</span>
-                        </div>
-                    </footer>
-                    <!-- partial -->
                 </div>
-                <!-- main-panel ends -->
+                <!-- partial:partials/_footer.html -->
+                <footer class="footer">
+                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
+                                href="https://github.com/muhamadfarhaninc/teams-pemweb" target="_blank">kelompok8
+                            </a>2023</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a
+                                href="" target="_blank"> Project UAS </a>
+                            website</span>
+                    </div>
+                </footer>
+                <!-- partial -->
             </div>
-            <!-- page-body-wrapper ends -->
+            <!-- main-panel ends -->
         </div>
-        <!-- container-scroller -->
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
 
-        <!-- plugins:js -->
-        <script src="{{ asset('dashboard/vendors/base/vendor.bundle.base.js') }}"></script>
-        <!-- endinject -->
-        <!-- Plugin js for this page-->
-        <script src="{{ asset('dashboard/vendors/chart.js/Chart.min.js') }}"></script>
-        <script src="{{ asset('dashboard/js/jquery.cookie.js') }}" type="text/javascript"></script>
-        <!-- End plugin js for this page-->
-        <!-- inject:js -->
-        <script src="{{ asset('dashboard/js/off-canvas.js') }}"></script>
-        <script src="{{ asset('dashboard/js/hoverable-collapse.js') }}"></script>
-        <script src="{{ asset('dashboard/js/template.js') }}"></script>
-        <script src="{{ asset('dashboard/js/todolist.js') }}"></script>
-        <!-- endinject -->
-        <!-- Custom js for this page-->
-        <script src="{{ asset('dashboard/js/dashboard.js') }}"></script>
-        <!-- End custom js for this page-->
+    <!-- plugins:js -->
+    <script src="{{ asset('dashboard/vendors/base/vendor.bundle.base.js') }}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <script src="{{ asset('dashboard/vendors/chart.js/Chart.min.js') }}"></script>
+    <script src="{{ asset('dashboard/js/jquery.cookie.js') }}" type="text/javascript"></script>
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="{{ asset('dashboard/js/off-canvas.js') }}"></script>
+    <script src="{{ asset('dashboard/js/hoverable-collapse.js') }}"></script>
+    <script src="{{ asset('dashboard/js/template.js') }}"></script>
+    <script src="{{ asset('dashboard/js/todolist.js') }}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="{{ asset('dashboard/js/dashboard.js') }}"></script>
+    <!-- End custom js for this page-->
 </body>
 
 </html>
