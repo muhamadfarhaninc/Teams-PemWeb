@@ -281,6 +281,10 @@
     <!-- Custom js for this page-->
     <script src="{{ asset('dashboard/js/dashboard.js') }}"></script>
     <!-- End custom js for this page-->
+    {{-- Sweet Alert --}}
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 </body>
 
 </html>

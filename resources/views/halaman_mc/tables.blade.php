@@ -25,15 +25,16 @@
             </ul>
         </div>
     @endif
-    @if (Session::get('success'))
-        <div class="alert alert-success alert-dismissible fade show">
-            <ul>
-                <li>
-                    {{ Session::get('success') }}
-
-                </li>
-            </ul>
-        </div>
+    @if (Session::has('success'))
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Swal.fire(
+                    'Sukses',
+                    '{{ Session::get('success') }}',
+                    'success'
+                );
+            });
+        </script>
     @endif
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
@@ -88,10 +89,10 @@
                                         </form>
                                         &nbsp;<a href="/mcedit/{{ $item->id }}"
                                             class="btn-sm btn-warning text-decoration-none">Edit</a>
-                                        <form onsubmit="return confirm('Yakin Hapus Data ?')" class="d-inline"
+                                        <form onsubmit="return confirmDelete(event)" class="d-inline"
                                             action="/mchapus/{{ $item->id }}" method="POST">
                                             @csrf
-                                            <input type="submit" class="btn-sm btn-danger btn-sm" value="Del">
+                                            <button type="submit" class="btn-sm btn-danger btn-sm">Del</button>
                                         </form>
                                 @endif
                                 </td>
@@ -103,3 +104,26 @@
         </div>
     </div>
 @endsection
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    function confirmDelete(event) {
+        event.preventDefault(); // Menghentikan form dari pengiriman langsung
+
+        Swal.fire({
+            title: 'Yakin Hapus Data?',
+            text: "Data yang dihapus tidak dapat dikembalikan!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Hapus',
+            cancelButtonText: 'Batal'
+        }).then((willDelete) => {
+            if (willDelete.isConfirmed) {
+                event.target.submit(); // Melanjutkan pengiriman form
+            } else {
+                swal('Your imaginary file is safe!');
+            }
+        });
+    }
+</script>

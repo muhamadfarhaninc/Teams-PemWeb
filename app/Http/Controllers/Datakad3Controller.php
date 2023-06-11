@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DataKad3;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class Datakad3Controller extends Controller
 {
@@ -56,6 +57,8 @@ class Datakad3Controller extends Controller
             'email' => $request->email,
         ]);
 
+        Session::flash('success', 'Data berhasil ditambahkan');
+
         return redirect('/datakad3')->with('success', 'Berhasil Menambahkan Data');
     }
 
@@ -106,12 +109,16 @@ class Datakad3Controller extends Controller
         $dataKad3->email = $request->email;
         $dataKad3->save();
 
-        return redirect('/datakad3')->with('success', 'Berhasil Mengubah Data');
+        Session::flash('success', 'Berhasil Mengubah Data');
+
+        return redirect('/datakad3');
     }
     function hapus(Request $request)
     {
         DataKad3::where('id', $request->id)->delete();
 
-        return redirect('/datakad3')->with('success', 'Berhasil Menghapus Data');
+        Session::flash('success', 'Berhasil Menghapus Data');
+
+        return redirect('/datakad3');
     }
 }

@@ -23,17 +23,17 @@
                                 <img src="{{ asset('gambar') }}/{{ $item->gambar }}" alt="Image"
                                     style="width: 50px; height: 50px;">
                             </div>
-                            <input class="form-control" type="file" id="gambar" name="gambar" required>
+                            <input class="form-control" type="file" id="gambar" name="gambar">
                         </div>
                         <div class="form-group">
                             <label for="nama">Nama lengkap</label>
                             <input type="text" class="form-control" id="nama" placeholder="Kevin Example"
-                                name="nama" value="{{ $item->name }}" required>
+                                name="nama" value="{{ $item->name }}">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail3">Email address</label>
                             <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email"
-                                name="email" value="{{ $item->email }}" required>
+                                name="email" value="{{ $item->email }}">
                         </div>
                         <input type="hidden" name="password" value="{{ $item->password }}">
                         <button type="submit" class="btn btn-primary me-2">Edit</button>

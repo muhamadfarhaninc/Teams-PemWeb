@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class McController extends Controller
 {
@@ -48,7 +49,9 @@ class McController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        return redirect('/mastercontrol')->with('success', 'Berhasil Menambahkan Data');
+        Session::flash('success', 'Data berhasil ditambahkan');
+
+        return redirect('/mastercontrol');
     }
 
     function edit($id)
@@ -72,27 +75,33 @@ class McController extends Controller
             'email.email' => 'Format Email Invalid',
         ]);
 
-        $gambar_file = $request->file('gambar');
-        $foto_ekstensi = $gambar_file->extension();
-        $nama_foto = date('ymdhis') . "." . $foto_ekstensi;
-        $gambar_file->move(public_path('gambar'), $nama_foto);
-        $model = User::find($request->id);
-        unset($model->gambar);
-        $model->save();
 
-        User::where('id', $request->id)->update([
-            'gambar' => $nama_foto,
-            'name' => $request->nama,
-            'email' => $request->email,
-            'password' => $request->password,
-        ]);
 
-        return redirect('/mastercontrol')->with('success', 'Berhasil Mengubah Data');
+        $user = User::find($request->id);
+
+        if ($request->hasFile('gambar')) {
+            $gambar_file = $request->file('gambar');
+            $foto_ekstensi = $gambar_file->extension();
+            $nama_foto = date('ymdhis') . "." . $foto_ekstensi;
+            $gambar_file->move(public_path('gambar'), $nama_foto);
+            $user->gambar = $nama_foto;
+        }
+
+        $user->name = $request->nama;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->save();
+
+        Session::flash('success', 'Data berhasil diedit');
+
+        return redirect('/mastercontrol');
     }
     function hapus(Request $request)
     {
         User::where('id', $request->id)->delete();
 
-        return redirect('/mastercontrol')->with('success', 'Berhasil Menghapus Data');
+        Session::flash('success', 'Data berhasil dihapus');
+
+        return redirect('/mastercontrol');
     }
 }
