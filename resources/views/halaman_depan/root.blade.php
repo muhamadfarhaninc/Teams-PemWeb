@@ -85,7 +85,8 @@
             <div class="row">
                 <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
                     <h1 data-aos="fade-up">JOIN US NOW</h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400">Menjadi Program Studi yang menghasilkan sumber daya manusia akuntansi yang profesional dan berdaya saing internasional</h2>
+                    <h2 data-aos="fade-up" data-aos-delay="400">Menjadi Program Studi yang menghasilkan sumber daya
+                        manusia akuntansi yang profesional dan berdaya saing internasional</h2>
                     <div data-aos="fade-up" data-aos-delay="800">
                         <a href="#about" class="btn-get-started scrollto">Get Started</a>
                     </div>
@@ -153,15 +154,21 @@
                 <div class="row content">
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
                         <p>
-                            visi 
+                            visi
                         </p>
                         <p>
-                            Menjadikan program studi komputerisasi akutansi yang unggul dalam menyiapkan sumber daya manusisa yang bertaqwa kepada Tuhan YME memiliki kemampuan dan etika profesi dalam bidang informatika serta berwawasan global
+                            Menjadikan program studi komputerisasi akutansi yang unggul dalam menyiapkan sumber daya
+                            manusisa yang bertaqwa kepada Tuhan YME memiliki kemampuan dan etika profesi dalam bidang
+                            informatika serta berwawasan global
                         </p>
                         <p> Misi</p>
                         <ul>
-                            <li><i class="ri-check-double-line"></i>Meningkatkan etika profesi dan sikap profesional yang tinggi menuju efektivitas kerja berdasarkan ketaqwaan kepada Tuhan YME serta memiliki kecintaan terhadap tanah air </li>
-                            <li><i class="ri-check-double-line"></i>Menganalisis dan mengantisipasi dinamika lingkungan usaha untuk perusahaan, konsultan, akuntan publik, perusahaan swasta, instansi pemerintah </li>
+                            <li><i class="ri-check-double-line"></i>Meningkatkan etika profesi dan sikap profesional
+                                yang tinggi menuju efektivitas kerja berdasarkan ketaqwaan kepada Tuhan YME serta
+                                memiliki kecintaan terhadap tanah air </li>
+                            <li><i class="ri-check-double-line"></i>Menganalisis dan mengantisipasi dinamika lingkungan
+                                usaha untuk perusahaan, konsultan, akuntan publik, perusahaan swasta, instansi
+                                pemerintah </li>
                         </ul>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
@@ -169,7 +176,11 @@
                             Tujuan
                         </p>
                         <p>
-                            Lulusan diharapkan dapat menjadi tenaga ahli madya yang memiliki kemampuan untuk mengamati, memahami, menganalisis, merancang dan membangun atau mengembangkan sistem informasi khususnya untuk bidang akuntansi (sistem informasi akuntansi) yang memiliki etika profesi dan sikap profesional yang tinggi berdasarkan ketaqwaan kepada Tuhan YME serta memiliki kecintaan terhadap tanah air 
+                            Lulusan diharapkan dapat menjadi tenaga ahli madya yang memiliki kemampuan untuk mengamati,
+                            memahami, menganalisis, merancang dan membangun atau mengembangkan sistem informasi
+                            khususnya untuk bidang akuntansi (sistem informasi akuntansi) yang memiliki etika profesi
+                            dan sikap profesional yang tinggi berdasarkan ketaqwaan kepada Tuhan YME serta memiliki
+                            kecintaan terhadap tanah air
                         </p>
                         <a href="#" class="btn-learn-more">Learn More</a>
                     </div>
@@ -446,38 +457,9 @@
 
                     <div class="testimonial-wrap">
                         <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials-1.jpg') }}"
+                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials1.jpg') }}"
                                 class="testimonial-img" alt="">
-                            <h3>Saul Goodman</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Persoalan bisa teratasi kalau adanya dialog, lakukan dialog dengan fasilitasi jurusan dan pastikan Anda berbicara secara gentle!
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials-2.jpg') }}"
-                                class="testimonial-img" alt="">
-                            <h3>Sara Wilsson</h3>
-                            <h4>Designer</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                               kami selaku mahasiswa yang mengambil jurusan prodi komputerisasi akutansi sangat senang sekali dengan
-                               adanya website,yang memudahkan kita dalam melakukan pembelajaran.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials-3.jpg') }}"
-                                class="testimonial-img" alt="">
-                            <h3>Jena Karlis</h3>
+                            <h3>Rina Nur Afifah</h3>
                             <h4>Store Owner</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -490,9 +472,40 @@
 
                     <div class="testimonial-wrap">
                         <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials-4.jpg') }}"
+                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials2.jpg') }}"
                                 class="testimonial-img" alt="">
-                            <h3>Matt Brandon</h3>
+                            <h3>Dilla Siti Nur Azizah</h3>
+                            <h4>Store Owner</h4>
+                            <p>
+                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                wihh..keren websitenya, ini mah jadi bikin semangat kalo mau belajar teh.
+                                sukses terus prodi KA
+                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials3.jpg') }}"
+                                class="testimonial-img" alt="">
+                            <h3>Denisa Kafinah</h3>
+                            <h4>Designer</h4>
+                            <p>
+                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                kami selaku mahasiswa yang mengambil jurusan prodi komputerisasi akutansi sangat senang
+                                sekali dengan
+                                adanya website,yang memudahkan kita dalam melakukan pembelajaran.
+                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials4.jpg') }}"
+                                class="testimonial-img" alt="">
+                            <h3>Riska Oktafiani</h3>
                             <h4>Freelancer</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -506,15 +519,15 @@
 
                     <div class="testimonial-wrap">
                         <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials-5.jpg') }}"
+                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials5.png') }}"
                                 class="testimonial-img" alt="">
-                            <h3>John Larson</h3>
-                            <h4>Entrepreneur</h4>
+                            <h3>Muhamad Farhan</h3>
+                            <h4>Software Engginer</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                                culpa fore nisi cillum quid.
+                                Saya pikir ini website oke juga, karena sudah memenuhi standar website crud dan bukan
+                                cuma itu ternyata website ini juga menggunakan dependency, api salah satunya SweetAlert
+                                dan banyak sekali fitur.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>
@@ -728,17 +741,21 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-img">
-                                <img src="{{ asset('vesperr-2/assets/img/team/team-1.jpg') }}" class="img-fluid"
+                                <img src="{{ asset('vesperr-2/assets/img/team/team1.jpg') }}" class="img-fluid"
                                     alt="">
                                 <div class="social">
-                                    <a href=""><i class="icofont-twitter"></i></a>
-                                    <a href=""><i class="icofont-facebook"></i></a>
-                                    <a href=""><i class="icofont-instagram"></i></a>
-                                    <a href=""><i class="icofont-linkedin"></i></a>
+                                    <a href="https://twitter.com/codeworshipper" target="_blank"><i
+                                            class="icofont-twitter"></i></a>
+                                    <a href="https://www.facebook.com/profile.php?id=100090920040853"
+                                        target="_blank"><i class="icofont-facebook"></i></a>
+                                    <a href="https://www.instagram.com/muhamadfarhan.inc/" target="_blank"><i
+                                            class="icofont-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/muhamad-farhan-75073a268" target="_blank"><i
+                                            class="icofont-linkedin"></i></a>
                                 </div>
                             </div>
                             <div class="member-info">
-                                <h4>Walter White</h4>
+                                <h4>Muhamad Farhan</h4>
                                 <span>Chief Executive Officer</span>
                             </div>
                         </div>
