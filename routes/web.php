@@ -23,9 +23,7 @@ Route::get('/', function () {
 });
 
 Route::middleware(['guest'])->group(function () {
-    Route::get('/sesi', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'loginreq']);
-    Route::get('/sesireg', [AuthController::class, 'register']);
     Route::post('/store', [AuthController::class, 'registerreq']);
 });
 
@@ -39,19 +37,32 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/task', [TodoController::class, 'index']);
     Route::post('/taskdel/{id}', [TodoController::class, 'del']);
 
-    Route::get('/logout', [AuthController::class, 'logout']);
+    Route::post('/logout', [AuthController::class, 'logout']);
 
-    Route::get('/datakad3', [Datakad3Controller::class, 'index']);
-    Route::get('/tambahkad', [Datakad3Controller::class, 'tambah']);
     Route::post('/tambahkadreq', [Datakad3Controller::class, 'tambahReq']);
-    Route::get('/kadedit/{id}', [Datakad3Controller::class, 'edit']);
     Route::post('/editkadreq', [Datakad3Controller::class, 'editReq']);
     Route::post('/kadhapus/{id}', [Datakad3Controller::class, 'hapus']);
 
-    Route::get('/mastercontrol', [McController::class, 'index']);
-    Route::get('/tambahmc', [McController::class, 'tambah']);
     Route::post('/tambahmcreq', [McController::class, 'tambahReq']);
-    Route::get('/mcedit/{id}', [McController::class, 'edit']);
     Route::post('/editmcreq', [McController::class, 'editReq']);
     Route::post('/mchapus/{id}', [McController::class, 'hapus']);
 });
+
+Route::middleware(['IsTamu'])->group(
+    function () {
+        Route::get('/sesi', [AuthController::class, 'login'])->name('login');
+        Route::get('/sesireg', [AuthController::class, 'register']);
+    }
+);
+
+Route::middleware(['IsLogin'])->group(
+    function () {
+        Route::get('/datakad3', [Datakad3Controller::class, 'index']);
+        Route::get('/tambahkad', [Datakad3Controller::class, 'tambah']);
+        Route::get('/kadedit/{id}', [Datakad3Controller::class, 'edit']);
+
+        Route::get('/mastercontrol', [McController::class, 'index']);
+        Route::get('/tambahmc', [McController::class, 'tambah']);
+        Route::get('/mcedit/{id}', [McController::class, 'edit']);
+    }
+);

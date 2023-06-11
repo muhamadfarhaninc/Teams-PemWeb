@@ -31,7 +31,7 @@
                 <div class="col-md-9 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Master Message</h4>
+                            <h4 class="card-title">Message</h4>
                             @if ($errors->any())
                                 <div class="alert alert-danger alert-dismissible fade show" style="height: 52px;">
                                     <ul>
@@ -42,7 +42,7 @@
                                     </ul>
                                 </div>
                             @elseif (Session::get('success'))
-                                <div class="alert alert-success alert-dismissible fade show">
+                                <div class="alert alert-success alert-dismissible fade show" style="height: 52px;">
                                     <ul>
                                         <li>
                                             {{ Session::get('success') }} <button type="button" class="btn btn-close"
