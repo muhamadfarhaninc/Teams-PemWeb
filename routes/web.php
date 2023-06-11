@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\Datakad3Controller;
 use App\Http\Controllers\McController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\UproleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +34,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/home', function () {
         return redirect('/admin');
     });
-    Route::get('/user', [AdminController::class, 'user'])->middleware('userAkses:user');
+    Route::get('/user', [UserController::class, 'index'])->middleware('userAkses:user');
     Route::get('/admin', [AdminController::class, 'index'])->middleware('userAkses:admin');
 
     Route::post('/task', [TodoController::class, 'index']);
@@ -67,5 +69,7 @@ Route::middleware(['IsLogin'])->group(
         Route::get('/mastercontrol', [McController::class, 'index']);
         Route::get('/tambahmc', [McController::class, 'tambah']);
         Route::get('/mcedit/{id}', [McController::class, 'edit']);
+
+        Route::get('/global', [ChatController::class, 'index']);
     }
 );

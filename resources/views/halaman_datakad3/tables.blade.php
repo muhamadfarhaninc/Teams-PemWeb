@@ -1,7 +1,5 @@
 @extends('halaman_dashboard.index')
 @section('fiture')
-    <div class="main-panel">
-        <div class="content-wrapper">
             <div class="row">
                 <div class="col-md-12 grid-margin">
                     <div class="d-flex justify-content-between align-items-center">
@@ -78,9 +76,7 @@
                                         <td>{{ $item->alamat }}</td>
                                         <td>{{ $item->telepon }}</td>
                                         <td>{{ $item->email }}</td>
-                                        <td><a href="#"
-                                                class="btn-sm btn-secondary text-decoration-none">Det</a>&nbsp;<a
-                                                href="/kadedit/{{ $item->id }}"
+                                        <td><a href="/kadedit/{{ $item->id }}"
                                                 class="btn-sm btn-warning text-decoration-none">Edit</a>
                                             <form onsubmit="return confirm('Yakin Hapus Data ?')" class="d-inline"
                                                 action="/kadhapus/{{ $item->id }}" method="POST">

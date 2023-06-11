@@ -1,7 +1,5 @@
 @extends('halaman_dashboard.index')
 @section('fiture')
-    <div class="main-panel">
-        <div class="content-wrapper">
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
@@ -59,5 +57,4 @@
                     </div>
                 </div>
             </div>
-        </div>
     @endsection

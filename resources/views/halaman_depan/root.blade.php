@@ -84,9 +84,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                    <h1 data-aos="fade-up">Grow your business with Vesperr</h1>
-                    <h2 data-aos="fade-up" data-aos-delay="400">We are team of talanted designers making websites with
-                        Bootstrap</h2>
+                    <h1 data-aos="fade-up">JOIN US NOW</h1>
+                    <h2 data-aos="fade-up" data-aos-delay="400">Menjadi Program Studi yang menghasilkan sumber daya manusia akuntansi yang profesional dan berdaya saing internasional</h2>
                     <div data-aos="fade-up" data-aos-delay="800">
                         <a href="#about" class="btn-get-started scrollto">Get Started</a>
                     </div>
@@ -154,26 +153,23 @@
                 <div class="row content">
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
+                            visi 
                         </p>
+                        <p>
+                            Menjadikan program studi komputerisasi akutansi yang unggul dalam menyiapkan sumber daya manusisa yang bertaqwa kepada Tuhan YME memiliki kemampuan dan etika profesi dalam bidang informatika serta berwawasan global
+                        </p>
+                        <p> Misi</p>
                         <ul>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat</li>
-                            <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in
-                                voluptate velit</li>
-                            <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat</li>
+                            <li><i class="ri-check-double-line"></i>Meningkatkan etika profesi dan sikap profesional yang tinggi menuju efektivitas kerja berdasarkan ketaqwaan kepada Tuhan YME serta memiliki kecintaan terhadap tanah air </li>
+                            <li><i class="ri-check-double-line"></i>Menganalisis dan mengantisipasi dinamika lingkungan usaha untuk perusahaan, konsultan, akuntan publik, perusahaan swasta, instansi pemerintah </li>
                         </ul>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
                         <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum.
+                            Tujuan
+                        </p>
+                        <p>
+                            Lulusan diharapkan dapat menjadi tenaga ahli madya yang memiliki kemampuan untuk mengamati, memahami, menganalisis, merancang dan membangun atau mengembangkan sistem informasi khususnya untuk bidang akuntansi (sistem informasi akuntansi) yang memiliki etika profesi dan sikap profesional yang tinggi berdasarkan ketaqwaan kepada Tuhan YME serta memiliki kecintaan terhadap tanah air 
                         </p>
                         <a href="#" class="btn-learn-more">Learn More</a>
                     </div>
@@ -442,7 +438,7 @@
             <div class="container">
 
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Testimonials</h2>
+                    <h2>Review Pengunjung</h2>
                     <p>Magnam dolores commodi suscipit eum quidem consectetur velit</p>
                 </div>
 
@@ -456,9 +452,7 @@
                             <h4>Ceo &amp; Founder</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                risus at semper.
+                                Persoalan bisa teratasi kalau adanya dialog, lakukan dialog dengan fasilitasi jurusan dan pastikan Anda berbicara secara gentle!
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>
@@ -472,9 +466,8 @@
                             <h4>Designer</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
-                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
-                                legam anim culpa.
+                               kami selaku mahasiswa yang mengambil jurusan prodi komputerisasi akutansi sangat senang sekali dengan
+                               adanya website,yang memudahkan kita dalam melakukan pembelajaran.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>
@@ -488,8 +481,8 @@
                             <h4>Store Owner</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
-                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                                wihh..keren websitenya, ini mah jadi bikin semangat kalo mau belajar teh.
+                                sukses terus prodi KA
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>
@@ -818,7 +811,7 @@
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Pricing</h2>
+                    <h2>Berita</h2>
                     <p>Sit sint consectetur velit nemo qui impedit suscipit alias ea</p>
                 </div>
 
@@ -989,17 +982,16 @@
                         <div class="info">
                             <div>
                                 <i class="ri-map-pin-line"></i>
-                                <p>A108 Adam Street<br>New York, NY 535022</p>
+                                <p>Jl.Seokarno-Hatta No.221<br>Leuwipanjang Bandung - Jawa Barat</p>
                             </div>
-
                             <div>
                                 <i class="ri-mail-send-line"></i>
-                                <p>info@example.com</p>
+                                <p>info@stmik-mi.ac.id</p>
                             </div>
 
                             <div>
                                 <i class="ri-phone-line"></i>
-                                <p>+1 5589 55488 55s</p>
+                                <p>+62 (022) 523 0382</p>
                             </div>
 
                         </div>
