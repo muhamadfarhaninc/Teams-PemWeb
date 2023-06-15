@@ -156,32 +156,27 @@
                         <p>
                             visi
                         </p>
-                        <p>
-                            Menjadikan program studi komputerisasi akutansi yang unggul dalam menyiapkan sumber daya
-                            manusisa yang bertaqwa kepada Tuhan YME memiliki kemampuan dan etika profesi dalam bidang
-                            informatika serta berwawasan global
-                        </p>
+                        @foreach ($visi as $item)
+                            <p>
+                                {{ $item->content }}
+                            </p>
+                        @endforeach
                         <p> Misi</p>
                         <ul>
-                            <li><i class="ri-check-double-line"></i>Meningkatkan etika profesi dan sikap profesional
-                                yang tinggi menuju efektivitas kerja berdasarkan ketaqwaan kepada Tuhan YME serta
-                                memiliki kecintaan terhadap tanah air </li>
-                            <li><i class="ri-check-double-line"></i>Menganalisis dan mengantisipasi dinamika lingkungan
-                                usaha untuk perusahaan, konsultan, akuntan publik, perusahaan swasta, instansi
-                                pemerintah </li>
+                            @foreach ($misi as $item)
+                                <li><i class="ri-check-double-line"></i>{{ $item->content }}</li>
+                            @endforeach
                         </ul>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
                         <p>
                             Tujuan
                         </p>
-                        <p>
-                            Lulusan diharapkan dapat menjadi tenaga ahli madya yang memiliki kemampuan untuk mengamati,
-                            memahami, menganalisis, merancang dan membangun atau mengembangkan sistem informasi
-                            khususnya untuk bidang akuntansi (sistem informasi akuntansi) yang memiliki etika profesi
-                            dan sikap profesional yang tinggi berdasarkan ketaqwaan kepada Tuhan YME serta memiliki
-                            kecintaan terhadap tanah air
-                        </p>
+                        @foreach ($tujuan as $item)
+                            <p>
+                                {{ $item->content }}
+                            </p>
+                        @endforeach
                         <a href="#" class="btn-learn-more">Learn More</a>
                     </div>
                 </div>

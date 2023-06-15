@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\Datakad3Controller;
+use App\Http\Controllers\FrontPageController;
 use App\Http\Controllers\McController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\UproleController;
@@ -21,9 +22,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('halaman_depan.root');
-});
+Route::get('/', [FrontPageController::class, 'index']);
 
 Route::middleware(['guest'])->group(function () {
     Route::post('/login', [AuthController::class, 'loginreq']);
