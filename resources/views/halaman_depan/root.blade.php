@@ -71,7 +71,7 @@
                     </li>
                     <li><a href="#contact">Contact</a></li>
 
-                    <li class="get-started"><a href="{{ url('/sesi') }}">Get Started</a></li>
+                    <li class="get-started"><a href="{{ url('/sesi') }}">Login</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
 
