@@ -546,7 +546,7 @@
                                 <img src="{{ asset('vesperr-2/assets/img/team/team-4.jpg') }}" class="img-fluid"
                                     alt="">
                                 <div class="social">
-                                    <a href=""><i class="icofont-twitter"></i></a>
+                                    <a href="https://google.com"><i class="icofont-twitter"></i></a>
                                     <a href=""><i class="icofont-facebook"></i></a>
                                     <a href=""><i class="icofont-instagram"></i></a>
                                     <a href=""><i class="icofont-linkedin"></i></a>

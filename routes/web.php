@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\ChatController;
 use App\Http\Controllers\Datakad3Controller;
 use App\Http\Controllers\FrontPageController;
 use App\Http\Controllers\McController;
@@ -11,18 +10,6 @@ use App\Http\Controllers\UproleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-Route::get('/', [FrontPageController::class, 'index']);
 
 Route::middleware(['guest'])->group(function () {
     Route::post('/login', [AuthController::class, 'loginreq']);
@@ -39,7 +26,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/task', [TodoController::class, 'index']);
     Route::post('/taskdel/{id}', [TodoController::class, 'del']);
 
-    Route::post('/logout', [AuthController::class, 'logout']);
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::post('/tambahkadreq', [Datakad3Controller::class, 'tambahReq']);
     Route::post('/editkadreq', [Datakad3Controller::class, 'editReq']);
@@ -54,8 +41,10 @@ Route::middleware(['auth'])->group(function () {
 
 Route::middleware(['IsTamu'])->group(
     function () {
+        Route::get('/', [FrontPageController::class, 'index']);
         Route::get('/sesi', [AuthController::class, 'login'])->name('login');
         Route::get('/sesireg', [AuthController::class, 'register']);
+        Route::get('/verify/{verify_key}', [AuthController::class, 'verify'])->name('verify');
     }
 );
 

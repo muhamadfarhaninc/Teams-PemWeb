@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->enum('role', ['admin', 'user'])->default('user');
             $table->string('gambar');
+            $table->string('verify_key');
             $table->rememberToken();
             $table->timestamps();
         });
