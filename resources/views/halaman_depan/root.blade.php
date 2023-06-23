@@ -1,3 +1,28 @@
+@if (Session::has('success'))
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire(
+                'Sukses',
+                '{{ Session::get('success') }}',
+                'success'
+            );
+        });
+    </script>
+@endif
+@if (Session::has('error'))
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Swal.fire(
+                'Error',
+                '{{ Session::get('error') }}',
+                'error'
+            );
+        });
+    </script>
+@endif
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -148,7 +173,7 @@
             <div class="container">
 
                 <div class="section-title" data-aos="fade-up">
-                    <h2>About Us</h2>
+                    <h2>Komputerasi Akuntansi D3</h2>
                 </div>
 
                 <div class="row content">
@@ -183,290 +208,6 @@
 
             </div>
         </section><!-- End About Us Section -->
-
-
-        <!-- ======= Testimonials Section ======= -->
-        <section id="testimonials" class="testimonials section-bg">
-            <div class="container">
-
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Review Pengunjung</h2>
-                    <p>Magnam dolores commodi suscipit eum quidem consectetur velit</p>
-                </div>
-
-                <div class="owl-carousel testimonials-carousel" data-aos="fade-up" data-aos-delay="200">
-
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials1.jpg') }}"
-                                class="testimonial-img" alt="">
-                            <h3>Rina Nur Afifah</h3>
-                            <h4>Store Owner</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                wihh..keren websitenya, ini mah jadi bikin semangat kalo mau belajar teh.
-                                sukses terus prodi KA
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials2.jpg') }}"
-                                class="testimonial-img" alt="">
-                            <h3>Dilla Siti Nur Azizah</h3>
-                            <h4>Store Owner</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                wihh..keren websitenya, ini mah jadi bikin semangat kalo mau belajar teh.
-                                sukses terus prodi KA
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials3.jpg') }}"
-                                class="testimonial-img" alt="">
-                            <h3>Denisa Kafinah</h3>
-                            <h4>Designer</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                kami selaku mahasiswa yang mengambil jurusan prodi komputerisasi akutansi sangat senang
-                                sekali dengan
-                                adanya website,yang memudahkan kita dalam melakukan pembelajaran.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials4.jpg') }}"
-                                class="testimonial-img" alt="">
-                            <h3>Riska Oktafiani</h3>
-                            <h4>Freelancer</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
-                                minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
-                                labore illum veniam.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{{ asset('vesperr-2/assets/img/testimonials/testimonials5.png') }}"
-                                class="testimonial-img" alt="">
-                            <h3>Muhamad Farhan</h3>
-                            <h4>Software Engginer</h4>
-                            <p>
-                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Saya pikir ini website oke juga, karena sudah memenuhi standar website crud dan bukan
-                                cuma itu ternyata website ini juga menggunakan dependency, api salah satunya SweetAlert
-                                dan banyak sekali fitur.
-                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Testimonials Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Portfolio</h2>
-                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
-                </div>
-
-                <div class="row" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('vesperr-2/assets/img/portfolio/portfolio-1.jpg') }}"
-                                class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('vesperr-2/assets/img/portfolio/portfolio-1.jpg') }}"
-                                        data-gall="portfolioGallery" class="venobox" title="App 1"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('vesperr-2/assets/img/portfolio/portfolio-2.jpg') }}"
-                                class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('vesperr-2/assets/img/portfolio/portfolio-2.jpg') }}"
-                                        data-gall="portfolioGallery" class="venobox" title="Web 3"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('vesperr-2/assets/img/portfolio/portfolio-3.jpg') }}"
-                                class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('vesperr-2/assets/img/portfolio/portfolio-3.jpg') }}"
-                                        data-gall="portfolioGallery" class="venobox" title="App 2"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('vesperr-2/assets/img/portfolio/portfolio-4.jpg') }}"
-                                class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 2</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('vesperr-2/assets/img/portfolio/portfolio-4.jpg') }}"
-                                        data-gall="portfolioGallery" class="venobox" title="Card 2"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('vesperr-2/assets/img/portfolio/portfolio-5.jpg') }}"
-                                class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('vesperr-2/assets/img/portfolio/portfolio-5.jpg') }}"
-                                        data-gall="portfolioGallery" class="venobox" title="Web 2"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('vesperr-2/assets/img/portfolio/portfolio-6.jpg') }}"
-                                class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 3</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('vesperr-2/assets/img/portfolio/portfolio-6.jpg') }}"
-                                        data-gall="portfolioGallery" class="venobox" title="App 3"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('vesperr-2/assets/img/portfolio/portfolio-7.jpg') }}"
-                                class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 1</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('vesperr-2/assets/img/portfolio/portfolio-7.jpg') }}"
-                                        data-gall="portfolioGallery" class="venobox" title="Card 1"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('vesperr-2/assets/img/portfolio/portfolio-8.jpg') }}"
-                                class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 3</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('vesperr-2/assets/img/portfolio/portfolio-8.jpg') }}"
-                                        data-gall="portfolioGallery" class="venobox" title="Card 3"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="{{ asset('vesperr-2/assets/img/portfolio/portfolio-9.jpg') }}"
-                                class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="{{ asset('vesperr-2/assets/img/portfolio/portfolio-9.jpg') }}"
-                                        data-gall="portfolioGallery" class="venobox" title="Web 3"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i
-                                            class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Portfolio Section -->
 
         <!-- ======= Team Section ======= -->
         <section id="team" class="team section-bg">
@@ -632,22 +373,52 @@
         </section><!-- End Pricing Section -->
 
 
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials section-bg">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Review Pengunjung</h2>
+                    <p>Magnam dolores commodi suscipit eum quidem consectetur velit</p>
+                </div>
+
+                <div class="owl-carousel testimonials-carousel" data-aos="fade-up" data-aos-delay="200">
+
+                    @foreach ($rating as $item)
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="{{ asset($item->picture) }}" class="testimonial-img" alt="">
+                                <h3>{{ $item->name }}</h3>
+                                <h4>{{ $item->date }}</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    {{ $item->rating }}
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    @endforeach
+
+                </div>
+
+            </div>
+        </section><!-- End Testimonials Section -->
+
+
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
             <div class="container">
 
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Contact Us</h2>
+                    <h2>Rating</h2>
                 </div>
 
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="contact-about">
-                            <h3>Vesperr</h3>
-                            <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus.
-                                Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc
-                                congue.</p>
+                            <h3>STMIK Mardira Indonesia</h3>
+                            <p>Pada tahun 2025 Menjadi Perguruan Tinggi Unggul yang Mampu Memberikan Kontribusi dalam Pengembangan Teknologi Informasi bagi Pemerintah, Dunia Usaha dan Industri di Tingkat Nasional.</p>
                             <div class="social-links">
                                 <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
                                 <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
@@ -677,36 +448,18 @@
                     </div>
 
                     <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form action="{{ route('rating') }}" method="POST">
+                            @csrf
                             <div class="form-group">
                                 <input type="text" name="name" class="form-control" id="name"
-                                    placeholder="Your Name" data-rule="minlen:4"
-                                    data-msg="Please enter at least 4 chars" />
-                                <div class="validate"></div>
+                                    placeholder="Your Name" required />
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" name="email" id="email"
-                                    placeholder="Your Email" data-rule="email"
-                                    data-msg="Please enter a valid email" />
-                                <div class="validate"></div>
+                                <textarea class="form-control" name="rating" rows="5" placeholder="Rating Website" required></textarea>
                             </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="subject" id="subject"
-                                    placeholder="Subject" data-rule="minlen:4"
-                                    data-msg="Please enter at least 8 chars of subject" />
-                                <div class="validate"></div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Send Rating</button>
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="message" rows="5" data-rule="required"
-                                    data-msg="Please write something for us" placeholder="Message"></textarea>
-                                <div class="validate"></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
                         </form>
                     </div>
 
@@ -723,19 +476,15 @@
             <div class="row d-flex align-items-center">
                 <div class="col-lg-6 text-lg-left text-center">
                     <div class="copyright">
-                        &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
+                        &copy; Copyright <strong>KomAkuD3</strong>. All Rights Reserved
                     </div>
                     <div class="credits">
-                        <!-- All the links in the footer should remain intact. -->
-                        <!-- You can delete the links only if you purchased the pro version. -->
-                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
-                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        Designed by <a href="https://github.com/muhamadfarhaninc/Teams-PemWeb">Kelompok8</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-                        <a href="#intro" class="scrollto">Home</a>
+                        <a href="#">Home</a>
                         <a href="#about" class="scrollto">About</a>
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Use</a>
