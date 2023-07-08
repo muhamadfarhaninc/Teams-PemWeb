@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AlumniController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Datakad3Controller;
 use App\Http\Controllers\FrontPageController;
@@ -39,6 +40,10 @@ Route::middleware(['IsLogin'])->group(
         Route::post('/editkadreq', [Datakad3Controller::class, 'editReq']);
         Route::post('/kadhapus/{id}', [Datakad3Controller::class, 'hapus']);
 
+        Route::post('/tambahalumnireq', [AlumniController::class, 'tambahReq']);
+        Route::post('/editalumnireq', [AlumniController::class, 'editReq']);
+        Route::post('/alumnihapus/{id}', [AlumniController::class, 'hapus']);
+
         Route::post('/tambahmcreq', [McController::class, 'tambahReq']);
         Route::post('/editmcreq', [McController::class, 'editReq']);
         Route::post('/mchapus/{id}', [McController::class, 'hapus']);
@@ -48,6 +53,10 @@ Route::middleware(['IsLogin'])->group(
         Route::get('/datakad3', [Datakad3Controller::class, 'index']);
         Route::get('/tambahkad', [Datakad3Controller::class, 'tambah']);
         Route::get('/kadedit/{id}', [Datakad3Controller::class, 'edit']);
+
+        Route::get('/alumni', [AlumniController::class, 'index']);
+        Route::get('/tambahalumni', [AlumniController::class, 'tambah']);
+        Route::get('/alumniedit/{id}', [AlumniController::class, 'edit']);
 
         Route::get('/mastercontrol', [McController::class, 'index']);
         Route::get('/tambahmc', [McController::class, 'tambah']);

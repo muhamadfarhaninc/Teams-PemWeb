@@ -4,11 +4,11 @@
         <div class="col-md-12 grid-margin">
             <div class="d-flex justify-content-between align-items-center">
                 <div>
-                    <h4 class="font-weight-bold mb-0">Data Komputerasi Akutansi D3</h4>
+                    <h4 class="font-weight-bold mb-0">Data Alumni</h4>
                 </div>
                 @if (Auth::user()->role != 'user')
                     <div>
-                        <a href="/tambahkad" class="text-decoration-none text-white"><button type="button"
+                        <a href="/tambahalumni" class="text-decoration-none text-white"><button type="button"
                                 class="btn btn-primary btn-icon-text btn-rounded">
                                 <i class="ti-plus btn-icon-prepend"></i>Tambah
                                 Data
@@ -41,28 +41,19 @@
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">KAD3 TABLE</h4>
+                <h4 class="card-title">Alumni TABLE</h4>
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th>
-                                    Gambar
-                                </th>
-                                <th>
                                     Nama lengkap
                                 </th>
                                 <th>
-                                    Nim
-                                </th>
-                                <th>
-                                    Alamat
+                                    Email
                                 </th>
                                 <th>
                                     Telepon
-                                </th>
-                                <th>
-                                    Email
                                 </th>
                                 <?php
                                     if(Auth::user()->role != 'user'){
@@ -75,23 +66,18 @@
                                 ?>
                             </tr>
                         </thead>
-                        @foreach ($datakad3 as $item)
+                        @foreach ($alumni as $item)
                             <tbody>
-                                <td class="py-1">
-                                    <img src="{{ asset('gambar') }}/{{ $item->gambar }}" alt="image" />
-                                </td>
                                 <td>{{ $item->nama }}</td>
-                                <td>{{ $item->nim }}</td>
-                                <td>{{ $item->alamat }}</td>
-                                <td>{{ $item->telepon }}</td>
                                 <td>{{ $item->email }}</td>
+                                <td>{{ $item->nohp }}</td>
                                 <?php
                                 if(Auth::user()->role != 'user'){
                                 ?>
-                                <td><a href="/kadedit/{{ $item->id }}"
+                                <td><a href="/alumniedit/{{ $item->id }}"
                                         class="btn-sm btn-warning text-decoration-none">Edit</a>
                                     <form onsubmit="return confirmDelete(event)" class="d-inline"
-                                        action="/kadhapus/{{ $item->id }}" method="POST">
+                                        action="/alumnihapus/{{ $item->id }}" method="POST">
                                         @csrf
                                         <button type="submit" class="btn-sm btn-danger btn-sm">Del</button>
                                     </form>

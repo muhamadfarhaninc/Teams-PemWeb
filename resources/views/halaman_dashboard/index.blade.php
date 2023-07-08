@@ -168,7 +168,8 @@
                                 <i class="ti-settings text-primary"></i>
                                 Settings
                             </a>
-                            <form action="{{ url('logout') }}" method="POST">
+                            <form action="{{ url('logout') }}" method="POST"
+                                onclick="return confirm('Yakin ingin keluar ?');">
                                 @csrf
                                 <button type="submit" class="dropdown-item">
                                     <i class="ti-power-off text-primary"></i>
@@ -210,6 +211,8 @@
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" href="/datakad3">Data
                                         KAD3</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="/alumni">Data
+                                        Alumni</a></li>
                             </ul>
                         </div>
                     </li>
